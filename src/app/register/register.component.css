@@ -1,0 +1,33 @@
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    input[type=text] {
+        border: none;
+        border-bottom: 2px solid lightblue;
+      }
+      input[type=number] {
+        border: none;
+        border-bottom: 2px solid lightblue;
+      }
+      input[type=email] {
+        border: none;
+        border-bottom: 2px solid lightblue;
+      }
+      input[type=date] {
+        border: none;
+        border-bottom: 2px solid lightblue;
+      }
+      input[type=file] {
+        border: none;
+        border-bottom: 2px solid lightblue;
+      }
+      input[type=password] {
+        border: none;
+        border-bottom: 2px solid lightblue;
+      }

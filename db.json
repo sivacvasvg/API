@@ -1,0 +1,176 @@
+{
+  "admin": [
+    {
+      "email": "siva9788@gmail.com",
+      "password": "9788"
+    }
+  ],
+  "user": [
+    {
+      "email": "as@gmail.com",
+      "password": "1234",
+      "fname": "Siva",
+      "lname": "vvv",
+      "fathername": "",
+      "mobile": "",
+      "address": "",
+      "date": "",
+      "pincode": "",
+      "state": {
+        "abbrev": "None"
+      },
+      "new": [],
+      "city": {
+        "abbrev": "None"
+      },
+      "food": null,
+      "id": 1
+    },
+    {
+      "email": "",
+      "password": "",
+      "fname": "siiii",
+      "lname": "vvvv",
+      "fathername": "",
+      "mobile": "",
+      "address": "",
+      "date": "",
+      "pincode": "",
+      "state": {
+        "abbrev": "None"
+      },
+      "city": {
+        "abbrev": "None"
+      },
+      "food": null,
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "email": "sanjey@gmail.com",
+      "password": "sanjey1",
+      "fname": "SANJEY",
+      "lname": "siva",
+      "fathername": "PAULRAJ",
+      "mobile": 8755453525,
+      "address": "Thiruvaluvar Street",
+      "date": "2023-04-13",
+      "pincode": 627859,
+      "state": {
+        "abbrev": "Tamil Nadu"
+      },
+      "city": {
+        "abbrev": "Thirunelveli"
+      },
+      "food": "Male",
+      "id": 3
+    },
+    {
+      "email": "arjun@gmail.com",
+      "password": "arjun2",
+      "fname": "ARJUN",
+      "lname": "T",
+      "fathername": "DHENRAJ",
+      "mobile": 9867543445,
+      "address": "Eli street",
+      "date": "2023-04-26",
+      "pincode": 627859,
+      "state": {
+        "abbrev": "Tamil Nadu"
+      },
+      "city": {
+        "abbrev": "Coimbatore"
+      },
+      "food": "Male",
+      "id": 2
+    },
+    {
+      "email": "mathavan@gmail.com",
+      "password": "88888",
+      "fname": "NNNN",
+      "lname": "NNNNN",
+      "fathername": "NNNNN",
+      "mobile": 9797979999,
+      "address": "vjjj",
+      "date": "2023-04-13",
+      "pincode": 80900,
+      "state": {
+        "abbrev": "Tamil Nadu"
+      },
+      "city": {
+        "abbrev": "Chennai"
+      },
+      "food": "Male",
+      "id": 4
+    },
+    {
+      "email": "riya@gmail.com",
+      "password": "123456",
+      "fname": "VJK",
+      "lname": "HJ",
+      "fathername": "VBNM",
+      "mobile": 1234567890,
+      "address": "svg",
+      "date": "2023-05-25",
+      "pincode": 56789,
+      "state": {
+        "abbrev": "Tamil Nadu"
+      },
+      "city": {
+        "abbrev": "Chennai"
+      },
+      "food": "Male",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "fname": "siuva",
+      "lname": "siva",
+      "id": 1,
+      "new": [
+        {}
+      ]
+    },
+    {
+      "fname": "siva",
+      "lname": "a",
+      "id": 2
+    },
+    {
+      "fname": "ljjfljdf",
+      "lname": "jklgfljdg",
+      "id": 3
+    },
+    {
+      "name": "mdfkdfk",
+      "email": "mdfkdkf",
+      "password": "dfkkdf",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "kfdklkfkfk",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "kfdklkfkfk",
+      "id": 6
+    },
+    {
+      "name": "ssss",
+      "email": "",
+      "password": "fffff",
+      "id": 7
+    }
+  ],
+  "profile": {
+    "name": "ssss",
+    "email": "sfsfsf",
+    "password": "sssss"
+  }
+}

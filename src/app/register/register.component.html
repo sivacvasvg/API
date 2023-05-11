@@ -1,0 +1,145 @@
+
+<button type="button" (click)="checking">Check</button>
+<section class="h-100 bg-dark">
+  <form [formGroup]="forms" (ngSubmit)="singin()" >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+              </div>
+              <div class="col-xl-6">
+               
+                <div class="card-body p-md-5 text-black">
+                  
+                  <h3 class="mb-5 text-uppercase">Registeration</h3>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" formControlName="fname"  [ngModel]="inputvalue" placeholder="First name"
+                        (ngModelChange)="inputvalue = $event.toUpperCase()"  
+                        id="fname" class="form-control form-control-lg" placeholderFirst name />
+                        <span style="color: red;" *ngIf="(forms.get('fname')?.hasError('required') || forms.get('fname')?.hasError('pattern')) && (forms.get('fname')?.dirty || forms.get('fname')?.touched)">Please Enter Valid Name</span><br>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" formControlName="lname"[ngModel]="inputvalue1"  placeholder="Last name<"
+                        (ngModelChange)="inputvalue1 = $event.toUpperCase()" id="form3Example1n" class="form-control form-control-lg" />
+                        <span style="color: red;" *ngIf="(forms.get('lname')?.hasError('required') || forms.get('lname')?.hasError('pattern')) && (forms.get('lname')?.dirty || forms.get('lname')?.touched)">Please Enter Valid Name</span><br>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text"formControlName="fathername"[ngModel]="inputvalue2" placeholder="Father's name"
+                        (ngModelChange)="inputvalue2 = $event.toUpperCase()" id="form3Example1m1" class="form-control form-control-lg" />
+                        <span style="color: red;" *ngIf="(forms.get('fathername')?.hasError('required') || forms.get('fathername')?.hasError('pattern')) && (forms.get('fathername')?.dirty || forms.get('fathername')?.touched)">Please Enter Valid Name</span><br>
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="number"formControlName="mobile"  placeholder="Mobile NO" id="form3Example1n1" class="form-control form-control-lg" />
+                        <span  style="color: red;" *ngIf="((forms.get('mobile')?.hasError('min')) || (forms.get('mobile')?.hasError('max'))) && (forms.get('mobile')?.dirty || forms.get('mobile')?.touched)">Please Enter 10 or 12 Digit</span>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="text"formControlName="address"  id="form3Example8" class="form-control form-control-lg" />
+                    <label class="form-label"  for="form3Example8">Address</label>
+                  </div>
+                 
+                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+  
+                    <h4 class="mb-0 me-4">Gender: </h4>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input type="radio" formControlName="food" value="Female" >
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input type="radio" formControlName="food" value="Male" >
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0">
+                      <input type="radio" formControlName="food" value="Other" >
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+  
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <label class="form-label"  for="form3Example8">State:</label>
+                      <select formControlName="state">
+                        <option *ngFor="let state of states" [ngValue]="state">
+                          {{ state.abbrev }}
+                        </option>
+                      </select>
+  
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <label class="form-label"  for="form3Example8">City:</label>
+                      <select formControlName="city">
+                        <option *ngFor="let city of citys" [ngValue]="city">
+                          {{ city.abbrev }}
+                        </option>
+                      </select>
+  
+                    </div>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="date" formControlName="date" id="form3Example9" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example9">DOB</label>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="number"formControlName="pincode" id="form3Example90" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example90">Pincode</label>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="file" id="form3Example99" class="form-control form-control-lg" />
+                    <label class="form-label" for="form3Example99">Your CV</label>
+                  </div>
+                  
+                  <div class="form-outline mb-4">
+                    <input type="email"formControlName="email" placeholder="Email" required id="form3Example97" class="form-control form-control-lg" />
+                    <span style="color: red;" *ngIf="(forms.get('email')?.hasError('required') || forms.get('email')?.hasError('email')) && (forms.get('email')?.dirty || forms.get('email')?.touched)">Please Enter Valid Email</span><br>
+                
+                    
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="password" placeholder="Password" formControlName="password" id="form3Example99" class="form-control form-control-lg" />
+                    <span  style="color: red;" *ngIf="((forms.get('password')?.hasError('minlength')) || (forms.get('password')?.hasError('maxlength'))) && (forms.get('password')?.dirty || forms.get('password')?.touched)">Password must be minLength 2 & maxLength 10</span>
+                  </div>
+                  
+  
+  
+                  <div class="d-flex justify-content-end pt-3">
+                   
+                    <button type="submit" [disabled]="forms.invalid" class="btn btn-primary btn-lg ms-2">Register</button>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </form>
+  </section>

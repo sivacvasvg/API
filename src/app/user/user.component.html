@@ -1,0 +1,134 @@
+
+<div class="container">
+    <h1>User Details</h1>
+    
+     <div id="content" #content class="table-responsive"> 
+    <!-- <br>
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+    </mat-form-field>
+    <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="term">
+</div> -->
+<div class="form-group mb-4">
+  <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+</div>
+    <table   class="table "  *ngIf="(val| filter: searchText).length > 0;else noResults " >
+      <tr>
+        <th scope="col">Your Id</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Father Name</th>
+        <th scope="col">Data of Birth</th>
+        <th scope="col">Mobile No</th>
+        <th scope="col">Address</th>
+        <th scope="col">Pin Code</th>
+        <th scope="col">State</th>
+        <th scope="col">City</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+      </tr>
+      <tr *ngFor="let vals of val| filter: searchText">
+        <td>{{vals.id}}</td>
+        <td>{{vals.fname}} {{vals.lname}}</td>
+        <td>{{vals.food}}</td>
+          <td>{{vals.fathername}}</td>
+          <td>{{vals.date}}</td>
+          <td>{{vals.mobile}}</td>
+          <td>{{vals.address}}</td>
+          <td>{{vals.pincode}}</td>
+          <td>{{vals.state.abbrev}}</td>
+          <td>{{vals.city.abbrev}}</td>
+          <td>{{vals.email}}</td>
+          <td>{{vals.password}}</td>
+          <td>
+            <a class="btn btn-outline-primary"  mat-raised-button color="primary"[routerLink]="['/edit', vals.id]">Edit</a>
+          </td>
+          <td><button type="button" mat-raised-button color="warn" (click)='BookDelete(vals.id)'>Delete</button></td>
+          <td> <button (click)="updateuser(vals.id)" mat-raised-button color="primary">Update</button></td>
+        </tr>
+    </table> 
+  </div>
+  <ng-template #noResults>
+    <p>No results found for "{{searchText}}".</p>
+  </ng-template>
+  </div>
+  <br>
+  <div class="container">
+    <button (click)="makePDF()"  mat-raised-button color="accent" style="text-align: center;">Download</button>
+   
+  </div>
+  
+  <br>
+  <!-- <div>
+    <h2>Angular Show/Hide Div on Radio Button Click</h2>
+    <label>
+      *ngIf="element.role !=='admin'" 
+      <input [value]="1" [(ngModel)]="sh" name="sh" type="radio"  /> Adams
+    </label>
+    <label>
+      <input [value]="0" [(ngModel)]="sh" name="sh" type="radio"  /> Johnas
+    </label>
+    <div class="text-center purple" *ngIf="sh == 1">Adams</div>
+    <div class="text-center red" *ngIf="sh == 0">Johnas</div>
+  </div> -->
+     
+<!-- <input name="type" [(ngModel)]="type" type="radio" [value]="1" [checked]="options"/> Admin
+<input name="type" [(ngModel)]="type" type="radio" [value]="0" [checked]="!options"/> User
+  
+<h2 *ngIf="type == 1">Admin</h2>
+<h2 *ngIf="type == 0">User</h2> -->
+<!-- <mat-radio-group aria-label="Select an option">
+  <mat-radio-button type="radio" value="radio1" name="customRadio" class="custom-control-input" [(ngModel)]="readioSelected" >Option 1</mat-radio-button>
+  <mat-radio-button  type="radio" value="radio2" name="customRadio" class="custom-control-input" [(ngModel)]="readioSelected" >Option 2</mat-radio-button>
+</mat-radio-group> -->
+<!-- <input name="options"  [(ngModel)]="options" type="radio" [value]="true" [checked]="options==true"/> Yes
+
+    <input name="options"[(ngModel)]="options" type="radio" [value]="false" [checked]="options==false"/> No</label>
+
+<div>
+      <h2 ng-show="options == 'true'">Supply</h2>
+      <h2 ng-show="options == 'false'">Demand</h2>
+</div> -->
+<!-- <input name="options"  [(ngModel)]="options" type="radio" [value]="true" [checked]="options"/> Yes
+
+<input name="options"[(ngModel)]="options" type="radio" [value]="false" [checked]="!options"/> No
+
+<h2 *ngIf="options">Supply</h2>
+<h2 *ngIf="!options">Demand</h2> -->
+<br>
+<div class="siva">
+<div class="container p-5 siva1">
+<h1 class="bg-warn">Data Sorting</h1>
+ 
+<div style="text-align: center;">
+  
+</div>
+<!-- <button (click)="makePDF()" >one</button> <button (click)='BookDelete(vals.id)'>kh</button> -->
+ <div>
+  Number Sort:
+    <input type="radio" value="radio1" name="customRadio" class="custom-control-input" [(ngModel)]="readioSelected">
+ 
+  
+Alpha Sort:
+    <input type="radio"  value="radio2" name="customRadio" class="custom-control-input" [(ngModel)]="readioSelected">
+ 
+  
+  
+  <!-- <button (click)="showContent()">Show Content</button>  -->
+  </div> 
+  <br>
+
+  
+  <div *ngIf="readioSelected=='radio1'">
+    <button type="button" mat-raised-button color="primary" (click)="sort()">Ascending</button>
+    <button type="button" mat-raised-button color="primary" (click)="reverce()">Descending</button>
+  </div>
+  <div *ngIf="readioSelected=='radio2'">
+    <button type="button" mat-raised-button color="accent" (click)="sort1()">Ascending</button>
+    <button type="button" mat-raised-button color="accent" (click)="sort2()">Descending</button>
+  </div>
+</div>
+</div>
+<p>{{val|json}}</p>
